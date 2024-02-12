@@ -1,5 +1,4 @@
 % Alldifferent model
-
 include "alldifferent.mzn";
 
 int: n; % Number of queens
@@ -9,7 +8,6 @@ array [1..n] of var 1..n: q; % Variables for queens on the rows (or columns)
 % Append ::domain to the end.  
 
 constraint alldifferent(q)::domain;  %%column constraint
-
 constraint alldifferent([q[i] + i | i in 1..n])::domain; %% explicit abs value 
 constraint alldifferent([q[i] - i | i in 1..n])::domain;
 

@@ -10,7 +10,7 @@ array [1..n] of var 1..n: q; % Variables for queens on the rows (or columns)
 
 constraint alldifferent(q)::domain;  %%column constraint
 
-constraint alldifferent([q[i] + i | i in 1..n])::domain; %% explicit abs value 
+constraint alldifferent([q[i] + i | i in 1..n])::domain; %% explicit abs value, without forall
 constraint alldifferent([q[i] - i | i in 1..n])::domain;
 
 % Search for all solutions, using N = 8, 9, 10, and 12.

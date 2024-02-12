@@ -8,7 +8,6 @@ include "global_cardinality.mzn";
 %constraint global_cardinality(x, [i | i in 0..n-1], [x[i] | i in 0..n-1]);
 constraint global_cardinality(x, array1d(0..n-1) , array1d(x));
 
-
 % the first implied constraint
 %constraint sum(i in 0..n-1)(x[i]) = n;
 

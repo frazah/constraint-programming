@@ -1,3 +1,5 @@
+include "diffn.mzn";
+
 int: n;
 int: w;
 int: h;
@@ -33,21 +35,21 @@ constraint forall(i in 1..n) (
   Ys[i] + hs[i] <= h
 );
 
-
+/*
 %% These constraint significantly reduce the failures
-%posters don´t exceed vertical space, implied
+%posters don´t exceed vertical space, IMPLIED
 
 constraint
   forall (i in 1..w) (
     sum(j in 1..n where Xs[j] <= i /\ i <= Xs[j] + ws[j]) (hs[j]) <= h
   );
   
-%posters don't exceed horizontal space, implied
+%posters don't exceed horizontal space, IMPLIED
 constraint
  forall (i in 1..h) (
     sum(j in 1..n where Ys[j] <= i /\ i <= Ys[j] + hs[j]) (ws[j]) <= w
   );
-  
+*/ 
 
 % posters must not overlap
 constraint 

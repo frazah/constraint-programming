@@ -1,8 +1,8 @@
+include "diffn.mzn";
+
 int: n;
 int: w;
 int: h;
-
-include "diffn.mzn";
 
 array [1..n] of int: ws; 
 array [1..n] of int: hs;

@@ -19,7 +19,7 @@ constraint forall(i,j in 1..n where i<j) (abs(rows[i] - rows[j]) != abs(i-j)); %
 
 
 % Channeling constraint
-constraint inverse(rows,cols);%the variables have the same size and domain, rows i = j if and only if rows j = i
+constraint inverse(rows,cols); % the variables have the same size and domain, rows i = j if and only if rows j = i
 
 
 % Search for all solutions, using N = 8, 9, 10, and 12.
